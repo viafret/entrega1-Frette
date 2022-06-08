@@ -10,9 +10,11 @@
 
 {% block seCambia %}
 
+{% if nombres %}
+
 <p>Estamos buscando integrantes de apellido {{apellido}}</p>
 
-{% if nombres %}
+
 
     <ul>
         {% for nombre in nombres %}
@@ -24,8 +26,12 @@
             <br>
         {% endfor %}
     </ul>
-    
+
+{% else %}
+<p>No hay integrantes con ese apellido</p>
 
 {% endif %}
+
+<p style="color: red;">{{respuesta}}</p>
 
 {% endblock %}
