@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 style="color:rgb(107, 91, 0) ;">Esto es una prueba de Plantilla en Python</h2>
+
+    <p style="color:red">Mi nombre es: {{nombre}}</p>
+    <p style="color:blue">Mi apellido es: {{apellido}}</p>
+
+    <h3>Este template fue creado el {{fecha}}</h3>
+
+    <h3>Estas son mis notas del curso</h3>
+    <p>
+    {% for n in notas %}
+
+        {% if n < 4 %}
+            <p style="color:red"> Nota Baja {{n}}</p>
+        {% else %}
+            <p style="color:rgb(43, 255, 0)"> Nota Alta {{n}}</p>
+        {% endif %}
+        
+    
+    {% endfor %}
+    </p>
+</body>
+</html>
